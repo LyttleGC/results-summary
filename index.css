@@ -1,0 +1,101 @@
+@font-face {
+    font-family: HankenGrotesk;
+    src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+}
+
+:root {
+    --font-primary: HankenGrotesk, sans-serif;
+
+    --primary-result-top-color: hsl(252, 100%, 67%);
+    --primary-result-bottom-color: hsl(241, 81%, 54%);
+
+    --secondary-result-bottom-color: hsla(241, 72%, 46%, 0);
+    --secondary-result-top-color: hsla(256, 72%, 46%, 1);
+
+    --primary-result-card-font-color: hsl(221, 100%, 96%);
+    --secondary-result-card-font-color: hsl(0, 0%, 100%);
+
+    --reaction-bg-color: hsl(0, 100%, 90%);
+    --reaction-font-color: hsl(0, 100%, 67%);
+    --memory-bg-color: hsl(39, 100%, 90%);
+    --memory-font-color: hsl(39, 100%, 90%);
+    --verbal-bg-color: hsl(166, 100%, 95%);
+    --verbal-font-color: hsl(166, 100%, 37%);
+    --visual-bg-color: hsl(234, 85%, 90%);
+    --visual-font-color: hsl(234, 85%, 45%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-primary);
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 700px;
+    height: 400px;
+    filter: drop-shadow(0 0 0.75rem hsl(241, 100%, 89%));
+    border-radius: 20px;
+    background: hsl(0, 0%, 100%);
+}
+
+.result__card {
+    background-image: linear-gradient(var(--primary-result-top-color), var(--primary-result-bottom-color));
+    width: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--primary-result-card-font-color);
+    padding: 1rem 0 1rem 0;
+}
+
+.result__card h1 {
+    font-size: 1em;
+    font-weight: 500;
+    margin: 10px;
+}
+
+.result__card--score {
+    background-image: linear-gradient(var(--secondary-result-top-color), var(--secondary-result-bottom-color));
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-size: 0.75rem;
+    margin: 10px 0 10px 0;
+}
+
+.result__card--score h2 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.result__card > h2 {
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.result__card > p {
+    width: 225px;
+    font-weight: 200;
+    margin: 15px 0 25px 0;
+}
+
+.summary__results {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+}
